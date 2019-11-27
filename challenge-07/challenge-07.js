@@ -11,7 +11,8 @@ A função deverá retornar o array atualizado.
 */
 
 function addItem(item){
-    return item;
+    arr.push(item)
+    return arr;
 }
 
 /*
@@ -19,7 +20,7 @@ Adicione um novo array ao array criado no início do desafio, com ao menos 3
 itens de tipos diferentes, mostrando o resultado no console.
 */
 
-addItem(arr.push(newArray = [ [3,2,1], false, '13']));
+addItem( [ [3,2,1], false, '13']);
 console.log(arr)
 console.log('-------------------------------------');
 
@@ -29,7 +30,7 @@ frase:
 "O segundo elemento do segundo array é [ELEMENTO]."
 */
 
-console.log(`O segundo elemento do segundo array é "${newArray[1]}".`);
+console.log(`O segundo elemento do segundo array é "${arr[5][1]}".`);
 console.log('-------------------------------------');
 
 /*
@@ -45,7 +46,7 @@ Agora mostre no console quantos itens tem o segundo array criado, com a frase:
 "O segundo array tem [QUANTIDADE DE ITENS] itens."
 */
 
-console.log(`O segundo array tem "${newArray.length}" itens.`);
+console.log(`O segundo array tem "${arr[5].length}" itens.`);
 console.log('-------------------------------------');
 
 /*
@@ -62,26 +63,26 @@ while(count <= 20){
 }
 
 /*
-Na mesma ideia do eindex2ercício acima: mostre agora os números ímpares.
+Na mesma ideia do exercícios acima: mostre agora os números ímpares.
 */
 
 console.log( 'Números ímpares entre 10 e 20:' );
 var count2 = 10;
 while(count2 <= 20){
 
-    count2 % 2 === 1 ? console.log(count2): '';
+    count2 % 2 !== 0 ? console.log(count2): '';
     count2++
 }
 
 /*
-Repita os mesmos eindex2ercícios feitos acima, mas agora usando o loop "for".
+Repita os mesmos exercícios feitos acima, mas agora usando o loop "for".
 Só vamos mudar o range:
 - No primeiro "for", mostre os números pares entre 100 e 120, inclusive eles;
 - No segundo "for", mostre os números ímpares entre 111 e 125, inclusive eles.
 */
 
 console.log( 'Números pares entre 100 e 120:' );
-for(var index = 100; index <= 200; index++){
+for(var index = 100; index <= 120; index++){
 
     index % 2 === 0 ? console.log(index): '';
 }
@@ -89,5 +90,5 @@ for(var index = 100; index <= 200; index++){
 console.log( 'Números ímpares entre 111 e 125:' );
 for(var index2 = 111; index2 <= 125; index2++){
 
-    index2 % 2 === 1 ? console.log(index2): '';
+    index2 % 2 !== 0 ? console.log(index2): '';
 }
